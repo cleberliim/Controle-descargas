@@ -14,11 +14,16 @@ $resultado = mysqli_query($conn, $sql);
 <div className="container h-full mx-auto max-w-full sm:px-2 px-8 text-xs">
     <div class="p-10 mt-4">
 
-    <div id="preloader">
-    <div id="loader">
-        <h1>Loading...</h1>
-    </div>
-</div>
+        <!-- pre-loader -->
+        <div id="preloader">
+            <div id="loader">
+                <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container flex justify-end mb-4">
             <a href="descargas.php" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm ml-auto">
                 Adicionar
@@ -80,6 +85,7 @@ $resultado = mysqli_query($conn, $sql);
                                 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                 <button type="submit" class="text-red-500 mr-2"><i class="fas fa-trash" style="color: #969696;"></i></button>
                             </form>
+
                             <!-- EDITAR -->
                             <a href="edit.descargas.php?id=<?php echo $row['id']; ?>" class="ml-2">
                                 <i class="fas fa-edit" style="color: #969696;"></i>

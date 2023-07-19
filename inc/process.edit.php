@@ -3,7 +3,8 @@
 include_once("../db/conection.php");
 
 // Obtém os valores enviados pelo formulário
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['update'])) {
+
     $id = $_POST["id"];
     $codigo = $_POST["codigo"];
     $cliente = $_POST["cliente"];
@@ -11,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = $_POST["data"];
     $vinculo = $_POST["vinculo"];
     $tipo = $_POST["tipo"];
+    $valor = $_POST["valor"];
     $status = $_POST["status"];
     $motorista = $_POST["motorista"];
     $cpfcnpj = $_POST["cpfcnpj"];
@@ -25,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = mysqli_real_escape_string($conn, $data);
     $vinculo = mysqli_real_escape_string($conn, $vinculo);
     $tipo = mysqli_real_escape_string($conn, $tipo);
+    $valor = mysqli_real_escape_string($conn, $valor);
     $status = mysqli_real_escape_string($conn, $status);
     $motorista = mysqli_real_escape_string($conn, $motorista);
     $cpfcnpj = mysqli_real_escape_string($conn, $cpfcnpj);
@@ -33,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $qvp = mysqli_real_escape_string($conn, $qvp);
 
     // Atualiza os dados na tabela
-    $sql = "UPDATE descargas SET `CÓDIGO` = '$codigo', `cliente` = '$cliente', `filial` = '$filial', `data_hora` = '$data', `vinculo` = '$vinculo', `tipo` = '$tipo', `STATUS` = '$status', `TITULAR` = '$motorista', `CPFCNPJ_DA_CONTA` = '$cpfcnpj', `peso` = '$peso', `vp` = '$vp', `QVP` = '$qvp' WHERE id = '$id'";
+    $sql = "UPDATE descargas SET `CÓDIGO` = '$codigo', `cliente` = '$cliente', `filial` = '$filial', `data_hora` = '$data', `vinculo` = '$vinculo', `tipo` = '$tipo', `VALOR` = $valor, `STATUS` = '$status', `TITULAR` = '$motorista', `CPFCNPJ_DA_CONTA` = '$cpfcnpj', `peso` = '$peso', `vp` = '$vp', `QVP` = '$qvp' WHERE id = '$id'";
 
     if ($conn->query($sql) === TRUE) {
         header('Location: ../dashboard.php');

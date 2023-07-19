@@ -22,7 +22,7 @@ session_start();
     <!-- Custom css -->
     <link rel="stylesheet" src="css/custom.css" />
 
-    
+
 
     <style>
         /*Overrides for Tailwind CSS */
@@ -127,7 +127,7 @@ session_start();
             background-color: #fff;
             z-index: 9999;
         }
-        
+
         #loader {
             position: absolute;
             top: 50%;
@@ -225,7 +225,7 @@ session_start();
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="dashboard.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
                 <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Base</a>
-          
+
             </div>
         </div>
     </nav>

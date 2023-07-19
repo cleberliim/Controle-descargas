@@ -69,7 +69,6 @@ if (!empty($id)) {
             </div>
 
 
-
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="filial">Filial</label>
                 <select id="filial" name="filial" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="<?php echo $filial; ?>">
@@ -149,8 +148,9 @@ if (!empty($id)) {
             </div>
         </div>
 
+        <input type="hidden" name="id" value="<?php echo $id ?>">
         <div class="flex justify-end">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">editar</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" name=update id="update" type="submit">editar</button>
         </div>
 
     </form>
