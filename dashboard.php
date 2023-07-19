@@ -30,7 +30,7 @@ $resultado = mysqli_query($conn, $sql);
             </a>
         </div>
 
-        <table id="example" class="table table-striped" style="width:100%">
+        <table id="example" class="table table-striped hover" style="width:100%">
             <thead class="text-xs">
                 <tr>
                     <th>CÓDIGO</th>

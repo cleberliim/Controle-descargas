@@ -14,7 +14,7 @@
                 </label>
             </div>
             <div class="w-1/4 mt-2 h-90 mb-8 p-5 text-right	">
-                <p class="text-xl"> Código </p>
+                <p class="text-xl"> Código: </p>
                 <p class="text-base font-bold"></p>
             </div>
         </div>
@@ -22,37 +22,53 @@
         <div class="flex flex-wrap -mx-3 mb-4">
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="codigo">CÓDIGO:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="codigo" type="text" placeholder="Digite o código">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="codigo">CÓDIGO: </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="valor" type="text">
+                <button type="button" id="buscar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Buscar</button>
             </div>
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="motorista">Motorista:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="motorista" type="text" placeholder="Digite o nome do motorista">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="motorista" type="text" readonly>
             </div>
             <div class="w-full md:w-80 px-3">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="cte">CTE:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cte" type="text" placeholder="Digite o número do CTE">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cte" type="text" readonly>
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cte">Cliente</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cliente" type="text" readonly>
+            </div>
+
+            <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="valor-vale">Valor do Vale:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="valor-vale" type="text" placeholder="Digite o valor do vale">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="valor-vale" type="text" readonly>
+            </div>
+
+            <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="valor-vale">Filial</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="filial" type="text" readonly>
             </div>
 
             <div class="w-full md:w-80 px-3 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="saldo">Saldo: O (+) OU (-)</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="saldo" type="text" placeholder="Digite o saldo">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="saldo" type="text" readonly>
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="peso">Peso:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="peso" type="text" placeholder="Digite o peso">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="peso" type="text" readonly">
+            </div>
+
+            <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="peso">QTD Volume:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="peso" type="text" readonly>
             </div>
 
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="afiliacao">Afiliaçao</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="afiliacao" type="text" placeholder=" ">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="afiliacao" type="text" readonly>
             </div>
         </div>
 
@@ -89,7 +105,7 @@
 
 
         <div class="flex justify-end">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Imprimir</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">IMPRIMIR</button>
         </div>
     </form>
 </div>
