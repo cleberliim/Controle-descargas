@@ -26,6 +26,8 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
 
+
+
     <script type='text/javascript'>
         $(document).ready(function() {
             $("input[name='codigo']").blur(function() {
