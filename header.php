@@ -23,7 +23,6 @@ session_start();
     <link rel="stylesheet" src="css/custom.css" />
 
 
-
     <style>
         /*Overrides for Tailwind CSS */
 
