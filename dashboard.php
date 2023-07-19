@@ -17,7 +17,7 @@ $resultado = mysqli_query($conn, $sql);
         <!-- pre-loader -->
         <div id="preloader">
             <div id="loader">
-                <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
+                <div class="animate-spin inline-block w-12 h-12 border-[6px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
                     <span class="sr-only">Loading...</span>
                 </div>
             </div>
