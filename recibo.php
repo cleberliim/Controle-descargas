@@ -24,7 +24,6 @@
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="codigo">CÓDIGO: </label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="codigo" type="text">
-
             </div>
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="motorista">Motorista:</label>
@@ -68,7 +67,7 @@
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="afiliacao">Afiliaçao</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" iname="afiliacao" type="text">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="afiliacao" type="text">
             </div>
         </div>
 
