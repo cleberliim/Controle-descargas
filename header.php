@@ -22,6 +22,26 @@ session_start();
     <!-- Custom css -->
     <link rel="stylesheet" src="css/custom.css" />
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $("input[name='codigo']").blur(function() {
+                var $cliente = $("input[name='cliente']");
+                var $filial = $("input[name='filial']");
+                $.getJSON('function.php', {
+                    codigo: $(this).val()
+                }, function(json) {
+                    $cliente.val(json.$cliente);
+                    $filial.val(json.filial);
+                });
+            });
+        });
+    </script>
+
+
 
     <style>
         /*Overrides for Tailwind CSS */
@@ -114,9 +134,6 @@ session_start();
             /*bg-indigo-500*/
         }
 
-
-
-
         #preloader {
             position: fixed;
             top: 0;
@@ -135,6 +152,8 @@ session_start();
             text-align: center;
         }
     </style>
+
+
 
     <title>Dashboard</title>
 </head>
