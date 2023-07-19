@@ -7,8 +7,8 @@ $(document).ready(function () {
       data: { valor: valor },
       dataType: "json",
       success: function (data) {
-        $("#campo1").val(data.campo1);
-        $("#campo2").val(data.campo2);
+        $("#motorista").val(data.motorista);
+        $("#cte").val(data.cte);
       },
     });
   });
