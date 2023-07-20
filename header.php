@@ -37,16 +37,14 @@ session_start();
                 $.getJSON('function.php', {
                     codigo: $(this).val()
                 }, function(json) {
-                    $cliente.val(json.cliente); // Correção aqui: removido o '$' antes de cliente
+                    $cliente.val(json.cliente);
                     $motorista.val(json.motorista);
-                    $valor.val(json.$valor);
-                    $filial.val(json.$filial);
+                    $valor.val(json.valor);
+                    $filial.val(json.filial);
                 });
             });
         });
     </script>
-
-
 
     <style>
         /*Overrides for Tailwind CSS */

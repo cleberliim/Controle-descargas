@@ -9,11 +9,11 @@ function retorna($codigo, $conn)
     $resultado_base = mysqli_query($conn, $result);
 
     if ($resultado_base->num_rows) {
-        $row_aluno = mysqli_fetch_assoc($resultado_base);
-        $valores['cliente'] = $row_aluno['cliente'];
-        $valores['motorista'] = $row_aluno['TITULAR'];
-        $valores['valores'] = $row_aluno['VALOR']; //primeiro nome do valor do input, segundo é o nome da coluna no DB
-        $valores['filial'] = $row_aluno['filial'];
+        $row_db = mysqli_fetch_assoc($resultado_base);
+        $valores['cliente'] = $row_db['cliente'];
+        $valores['motorista'] = $row_db['TITULAR'];
+        $valores['valores'] = $row_db['VALOR']; //primeiro nome do valor do input, segundo é o nome da coluna no DB
+        $valores['filial'] = $row_db['filial'];
     } else {
         $valores['cliente'] = 'Não encontrado';
         $valores['motorista'] = 'Não encontrado';
