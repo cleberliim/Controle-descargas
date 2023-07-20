@@ -35,17 +35,17 @@
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="cte">Cliente</label>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cliente">Cliente</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="cliente" type="text">
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="valor-vale">Valor do Vale:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="valor-vale" type="text">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="valores">Valor</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="valores" type="text">
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="valor-vale">Filial</label>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="filial">Filial</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="filial" type="text">
             </div>
 
@@ -60,8 +60,8 @@
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="peso">QTD Volume:</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="peso" type="text">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="qtd">QTD Volume:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="qtd" type="text">
             </div>
 
 

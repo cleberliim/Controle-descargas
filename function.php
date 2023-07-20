@@ -3,19 +3,27 @@ include_once("db/conection.php");
 
 function retorna($codigo, $conn)
 {
-    $result = "SELECT * FROM descargas WHERE CÓDIGO = '$codigo' LIMIT 1";
-    $resultado_aluno = mysqli_query($conn, $result);
+    $codigo = mysqli_real_escape_string($conn, $codigo); // Evitar SQL Injection
 
-    if ($resultado_aluno->num_rows) {
-        $row_aluno = mysqli_fetch_assoc($resultado_aluno);
+    $result = "SELECT * FROM descargas WHERE CÓDIGO = '$codigo' LIMIT 1";
+    $resultado_base = mysqli_query($conn, $result);
+
+    if ($resultado_base->num_rows) {
+        $row_aluno = mysqli_fetch_assoc($resultado_base);
         $valores['cliente'] = $row_aluno['cliente'];
+        $valores['motorista'] = $row_aluno['TITULAR'];
+        $valores['valores'] = $row_aluno['VALOR']; //primeiro nome do valor do input, segundo é o nome da coluna no DB
         $valores['filial'] = $row_aluno['filial'];
     } else {
         $valores['cliente'] = 'Não encontrado';
+        $valores['motorista'] = 'Não encontrado';
+        $valores['valores'] = 'Não encontrado';
+        $valores['filial'] = 'Não encontrado';
     }
     return json_encode($valores);
 }
 
 if (isset($_GET['codigo'])) {
+    header('Content-Type: application/json'); // Definir o cabeçalho JSON
     echo retorna($_GET['codigo'], $conn);
 }
