@@ -26,25 +26,6 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
 
-    <script type='text/javascript'>
-        $(document).ready(function() {
-            $("input[name='codigo']").blur(function() {
-                var $cliente = $("input[name='cliente']");
-                var $motorista = $("input[name='motorista']");
-                var $valor = $("input[name='valores']");
-                var $filial = $("input[name='filial']");
-
-                $.getJSON('function.php', {
-                    codigo: $(this).val()
-                }, function(json) {
-                    $cliente.val(json.cliente);
-                    $motorista.val(json.motorista);
-                    $valor.val(json.valor);
-                    $filial.val(json.filial);
-                });
-            });
-        });
-    </script>
 
     <style>
         /*Overrides for Tailwind CSS */

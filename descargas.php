@@ -79,17 +79,17 @@
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="vp">V/P</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="vp" id="vp" type="text" placeholder="Digite o peso">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="vp" id="vp" type="text" placeholder="Digite o V/P">
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="qvp">QV/P</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="qvp" id="qvp" type="text" placeholder="Digite o peso">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="qvp" id="qvp" type="text" placeholder="Digite o QV/P">
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="valor">Valor</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="valor" id="valor" type="text" placeholder="Digite o peso">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="valor" id="valor" type="text" placeholder="Digite o valor">
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">

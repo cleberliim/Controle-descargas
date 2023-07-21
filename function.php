@@ -14,11 +14,15 @@ function retorna($codigo, $conn)
         $valores['motorista'] = $row_db['TITULAR'];
         $valores['valores'] = $row_db['VALOR']; //primeiro nome do valor do input, segundo é o nome da coluna no DB
         $valores['filial'] = $row_db['filial'];
+        $valores['peso'] = $row_db['peso'];
+        $valores['vinculo'] = $row_db['vinculo'];
     } else {
         $valores['cliente'] = 'Não encontrado';
         $valores['motorista'] = 'Não encontrado';
         $valores['valores'] = 'Não encontrado';
         $valores['filial'] = 'Não encontrado';
+        $valores['peso'] = 'Não encontrado';
+        $valores['vinculo'] = 'Não encontrado';
     }
     return json_encode($valores);
 }
