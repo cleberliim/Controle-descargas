@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $peso = $_POST["peso"];
     $vp = $_POST["vp"];
     $qvp = $_POST["qvp"];
+    $cte = $_POST["cte"];
 
 
     // Conecta ao banco de dados
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepara a consulta SQL
-    $sql = "INSERT INTO descargas (CÓDIGO, cliente, filial, data_hora, vinculo, tipo, status, TITULAR, CPFCNPJ_DA_CONTA, VOLUMETONELADA, vp, QVP) VALUES ('$codigo', '$cliente', '$filial', '$data', '$vinculo', '$tipo', '$status',  '$motorista', '$cpfcnpj', '$peso', '$vp', '$qvp')";
+    $sql = "INSERT INTO descargas (CÓDIGO, cliente, filial, data_hora, vinculo, tipo, status, TITULAR, CPFCNPJ_DA_CONTA, VOLUMETONELADA, vp, QVP, cte) VALUES ('$codigo', '$cliente', '$filial', '$data', '$vinculo', '$tipo', '$status',  '$motorista', '$cpfcnpj', '$peso', '$vp', '$qvp', '$cte')";
 
     // Executa a consulta SQL
     if (mysqli_query($conexao, $sql)) {

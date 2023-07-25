@@ -81,6 +81,7 @@
                 <select id="vp" name="vp" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     <option>Peso</option>
                     <option>QTD VOL.</option>
+                </select>
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
@@ -94,6 +95,12 @@
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cte">CTE'S</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="cte" id="cte" type="text" placeholder="Digite o CTE">
+            </div>
+
+
+            <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="status">Status</label>
                 <select id="status" name="status" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     <option>Pago</option>
@@ -103,8 +110,8 @@
             </div>
         </div>
 
-        <div class="flex justify-end">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Adicionar</button>
+        <div class="flex justify-end mr-40">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline" type="submit">Adicionar</button>
         </div>
 
     </form>

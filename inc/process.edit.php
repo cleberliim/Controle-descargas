@@ -19,6 +19,7 @@ if (isset($_POST['update'])) {
     $peso = $_POST["peso"];
     $vp = $_POST["vp"];
     $qvp = $_POST["qvp"];
+    $cte = $_POST["cte"];
 
     // Escapar caracteres especiais para evitar injeção de SQL
     $codigo = mysqli_real_escape_string($conn, $codigo);
@@ -34,9 +35,10 @@ if (isset($_POST['update'])) {
     $peso = mysqli_real_escape_string($conn, $peso);
     $vp = mysqli_real_escape_string($conn, $vp);
     $qvp = mysqli_real_escape_string($conn, $qvp);
+    $cte = mysqli_real_escape_string($conn, $cte);
 
     // Atualiza os dados na tabela
-    $sql = "UPDATE descargas SET `CÓDIGO` = '$codigo', `cliente` = '$cliente', `filial` = '$filial', `data_hora` = '$data', `vinculo` = '$vinculo', `tipo` = '$tipo', `VALOR` = $valor, `STATUS` = '$status', `TITULAR` = '$motorista', `CPFCNPJ_DA_CONTA` = '$cpfcnpj', `peso` = '$peso', `vp` = '$vp', `QVP` = '$qvp' WHERE id = '$id'";
+    $sql = "UPDATE descargas SET `CÓDIGO` = '$codigo', `cliente` = '$cliente', `filial` = '$filial', `data_hora` = '$data', `vinculo` = '$vinculo', `tipo` = '$tipo', `VALOR` = $valor, `STATUS` = '$status', `TITULAR` = '$motorista', `CPFCNPJ_DA_CONTA` = '$cpfcnpj', `peso` = '$peso', `vp` = '$vp', `QVP` = '$qvp',  `cte` = '$cte' WHERE id = '$id'";
 
     if ($conn->query($sql) === TRUE) {
         header('Location: ../dashboard.php');

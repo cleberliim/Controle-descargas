@@ -30,6 +30,7 @@ if (!empty($id)) {
         $vp = $row['vp'];
         $qvp = $row['QVP'];
         $valor = $row['VALOR'];
+        $cte = $row['cte'];
 
         // Convertendo a data para o formato desejado (d/m/Y)
         $data_formatada = date('d/m/Y', strtotime($data));
@@ -125,7 +126,10 @@ if (!empty($id)) {
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="vp">V/P</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="vp" id="vp" type="text" placeholder="Digite o V/P" value="<?php echo $vp; ?>">
+                <select id="vp" name="vp" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option <?php if ($status == 'Peso') echo 'selected'; ?>>Peso</option>
+                    <option <?php if ($status == 'QTD-VOL') echo 'selected'; ?>>QTD-VOL</option>
+                </select>
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
@@ -139,6 +143,11 @@ if (!empty($id)) {
             </div>
 
             <div class="w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cte">CTE'S</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="cte" id="cte" type="text" placeholder="Digite o CTE" value="<?php echo $cte; ?>">
+            </div>
+
+            <div class=" w-full md:w-80 px-3 mb-4 md:mb-0 mt-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="status">Status</label>
                 <select id="status" name="status" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                     <option <?php if ($status == 'Pago') echo 'selected'; ?>>Pago</option>

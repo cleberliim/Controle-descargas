@@ -9,7 +9,7 @@ include_once('header.php');
 include_once("db/conection.php");
 
 // listar todos os dados
-$sql = "SELECT * FROM contas";
+$sql = "SELECT * FROM base";
 $resultado = mysqli_query($conn, $sql);
 
 ?>

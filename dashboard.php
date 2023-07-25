@@ -37,6 +37,7 @@ $resultado = mysqli_query($conn, $sql);
                     <th>CLIENTE</th>
                     <th>FILIAL</th>
                     <th>MOTORISTA</th>
+                    <th>CTE'S</th>
                     <th>VINCULO</th>
                     <th>DATA</th>
                     <th>VALOR</th>
@@ -69,6 +70,7 @@ $resultado = mysqli_query($conn, $sql);
                         <td><?php echo $row['cliente']; ?> </td>
                         <td><?php echo $row['filial']; ?> </td>
                         <td><?php echo $row['TITULAR']; ?> </td>
+                        <td><?php echo $row['cte']; ?> </td>
                         <td><?php echo $row['vinculo']; ?> </td>
                         <td title="<?php echo $nomeDiaSemana; ?>"><?php echo date('d/m/Y', $data); ?> </td>
                         <td><?php echo $row['VALOR']; ?> </td>
