@@ -19,30 +19,38 @@ $resultado = mysqli_query($conn, $sql);
         <table id="example" class="table table-striped" style="width:100%">
             <thead class="text-xs">
                 <tr>
-                    <th>RESPONSÁVEL</th>
-                    <th>TELEFONE</th>
+                    <th>CPF/CNPJ</th>
                     <th>RAZÃO SOCIAL</th>
                     <th>CIDADE</th>
                     <th>UF</th>
-                    <th>Tipo</th>
-                    <th>Pago</th>
+                    <th>RESPONSAVEL</th>
+                    <th>TELEFONE</th>
+                    <th>TIPO DE CONTA</th>
+                    <th>INF CONTA</th>
+                    <th>AGENCIA</th>
+                    <th>CONTA</th>
+                    <th>CÓDIGO</th>
+                    <th>OBS</th>
+
                 </tr>
             </thead>
             <tbody>
 
                 <?php while ($row = mysqli_fetch_assoc($resultado)) : ?>
                     <tr class=" text-xs">
-                        <td class="px-6 py-4"><?php echo $row['RESPONSÁVEL']; ?> </td>
-                        <td class="px-6 py-4"><?php echo $row['TELEFONE']; ?> </td>
-                        <td class="px-6 py-4"><?php echo $row['Razão_Social']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['CPF_CNPJ']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['Raz_o_Social']; ?> </td>
                         <td class="px-6 py-4"><?php echo $row['Cidade']; ?> </td>
                         <td class="px-6 py-4"><?php echo $row['UF']; ?> </td>
-                        <td class="px-6 py-4">
-                            <span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600"> Descarga </span>
-                        </td>
-                        <td class="px-6 py-4"><i class="text-base	 fas fa-check-circle" style="color: #46d00b;"></i></i></td>
-                    </tr>
-                <?php endwhile; ?>
+                        <td class="px-6 py-4"><?php echo $row['RESPONS_VEL']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['TELEFONE']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['TIPO_DE_CONTA']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['INF_CONTA']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['AGENCIA']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['CONTA']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['C_DIGO']; ?> </td>
+                        <td class="px-6 py-4"><?php echo $row['OBS']; ?> </td>
+                    <?php endwhile; ?>
 
             </tbody>
         </table>
