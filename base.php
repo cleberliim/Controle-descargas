@@ -16,6 +16,14 @@ $resultado = mysqli_query($conn, $sql);
 
 <div className="container h-full mx-auto max-w-full sm:px-2 px-8 text-xs mt-14">
     <div class="p-10 mt-12">
+        <!-- pre-loader -->
+        <div id="preloader">
+            <div id="loader">
+                <div class="animate-spin inline-block w-12 h-12 border-[6px] border-current border-t-transparent text-blue-600 rounded-full" role="status" aria-label="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
         <table id="example" class="table table-striped" style="width:100%">
             <thead class="text-xs">
                 <tr>
